@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'user'
 
 url = "https://api.line.me/v2/bot/message/reply"
-access_token = '63qMWXPLN7JbDn5utlUzUs3w2pa+G3BEyJF7yfcqjTSi7TfYdi6i7kyNHnExzmCUZ5ZiuUj3d3vPGJ3eK2BHglSEuPGjQwwZZcr8WbZQuaspiT6EAj6bMKL9WRxTuwOhaO55NKynFLHQadj6xk8kBQdB04t89/1O/w1cDnyilFU='
+access_token = 'beTFlaxqoj4oGD2piBJ6NTKuNwX+z9fKWDmgIVxgGYg+ETIn3bRXmJE2brUuuwytczrU7JojjucGpQpiaFd0i3hyOirMbXHFbbE8cL19VSE2NFMPGbaBZpGcdgttbfQG4YRWCCNtaJilg27ozNZZLAdB04t89/1O/w1cDnyilFU='
 headers = { 'Content-Type': 'application/json','Authorization': 'Bearer ' + access_token}
 headers_bot = {
     'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ def webhook():
         }
         response = requests.post(
             'https://api.docsbot.ai/teams/ZDhaL3IauO3emJQENvdX/bots/fFGiIfhrYMZEARG1rEsr/ask',
-            headers=headers,
+            headers=headers_bot,
             json=json_data,
         )
         res = json.loads(response.text)
